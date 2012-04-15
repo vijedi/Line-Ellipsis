@@ -1,0 +1,61 @@
+<html>
+<head>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+	<script type="text/javascript" src="https://raw.github.com/jquery/jquery-metadata/master/jquery.metadata.js"></script>
+	<script type="text/javascript" src="jquery.lineellipsis.js"></script>	
+
+	<style type="text/css">
+		body {
+			font-size: 14px;
+		}
+		.text {
+			width: 200px;
+			height: 100px;
+		}
+
+		.text a {
+			font-size: 18px;
+		}
+	</style>
+</head>
+
+<body>
+	<h2>Long text without ellipsis</h2>
+	<div>
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+	</div>
+	<h2>Truncated down to 3 lines</h2>
+	<div class="text linesEllipsis {numLines: 3}">
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+	</div>
+	<h2>Truncated down to 4 lines, with child element</h2>
+	<div class="text linesEllipsis {numLines: 4, child: 'a'}">
+		<a href="http://www.google.com">
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+		</a>
+		
+	</div>
+
+	<script type="text/javascript">
+		$(function() {
+			$('.linesEllipsis').linesEllipsis()
+		});
+	</script>
+
+</body>
+</html>
