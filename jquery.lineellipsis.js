@@ -1,5 +1,5 @@
 (function($) {
-	$.fn.linesEllipsis = function() {
+	$.fn.lineEllipsis = function() {
         return this.each(function() {
                 var el = $(this);
                 var md = el.metadata();
