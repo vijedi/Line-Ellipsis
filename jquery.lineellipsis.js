@@ -21,7 +21,7 @@
 				   	var text = container.html();
 
 				   	var t = $(container[0].cloneNode(true))
-                            .hide()
+                            .css('visibility', 'hidden')
                             .css('position', 'relative')
                             .css('overflow', 'visible')
                             .width(container.width())
